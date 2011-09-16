@@ -6,8 +6,13 @@ use Module::Build;
 
 Module::Build->new(
 	module_name => "Pod::Simple::FromTree",
-	dist_version => "0.000",
 	license => "perl",
+	configure_requires => {
+		"Module::Build" => 0,
+		"perl" => "5.006",
+		"strict" => 0,
+		"warnings" => 0,
+	},
 	build_requires => {
 		"Module::Build" => 0,
 		"Pod::Simple::DumpAsXML" => 0,
