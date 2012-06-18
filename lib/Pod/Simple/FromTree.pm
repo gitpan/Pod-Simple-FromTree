@@ -42,7 +42,7 @@ package Pod::Simple::FromTree;
 use warnings;
 use strict;
 
-our $VERSION = "0.001";
+our $VERSION = "0.002";
 
 use parent "Pod::Simple";
 
@@ -85,7 +85,7 @@ Andrew Main (Zefram) <zefram@fysh.org>
 
 Copyright (C) 2010 PhotoBox Ltd
 
-Copyright (C) 2011 Andrew Main (Zefram) <zefram@fysh.org>
+Copyright (C) 2011, 2012 Andrew Main (Zefram) <zefram@fysh.org>
 
 =head1 LICENSE
 

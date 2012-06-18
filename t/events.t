@@ -6,6 +6,12 @@ use Test::More tests => 2;
 
 use_ok "Pod::Simple::FromTree";
 
+sub ignore_wsp($) {
+	my($str) = @_;
+	$str =~ s/[ \t\n]+/ /g;
+	return $str;
+}
+
 @FromTreeAsXML::ISA = qw(Pod::Simple::DumpAsXML Pod::Simple::FromTree);
 my $p = "FromTreeAsXML"->new;
 my $output = "";
@@ -394,7 +400,7 @@ $p->parse_tree([
     " is a tricky operator to write about in POD."
   ]
 ]);
-is $output, <<\EOF;
+is ignore_wsp($output), ignore_wsp(<<\EOF);
 <Document start_line="1">
   <head1 start_line="1">
     OH HAI
